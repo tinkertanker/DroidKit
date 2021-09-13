@@ -20,6 +20,8 @@ In Xcode, go to `File` → `Add Packages…` and paste in `https://github.com/ti
 
 ### Swift Playgrounds
 Unfortunately, the current version of Playgrounds does not support Swift Package Manager, therefore, this will be a little annoying.
+> Alternatively, you can just download the `DroidKit Demo.playgroundbook`.
+
 1. Clone this Repository
 2. Create a new Playground and open it in Finder
 3. `Control-Click` or `Right-Click` and `Show Package Contents`
