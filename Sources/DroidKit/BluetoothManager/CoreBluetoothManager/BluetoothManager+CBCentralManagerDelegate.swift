@@ -12,7 +12,6 @@ import CoreBluetooth
 extension BluetoothManager: CBCentralManagerDelegate {
     func centralManagerDidUpdateState(_ central: CBCentralManager) {
         if centralManager.state == .poweredOn {
-            
             centralManager.scanForPeripherals(withServices: [BLEConstants.UUID_W32_SERVICE], options: nil)
             
             onScan?()

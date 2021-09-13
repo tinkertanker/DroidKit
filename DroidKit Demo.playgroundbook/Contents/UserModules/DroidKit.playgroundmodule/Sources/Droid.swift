@@ -78,13 +78,13 @@ public class Droid {
     }
     
     public func turnWheel(by angle: Angle) {
-        guard angle ~= .degrees(0) ... .degrees(180) else { return }
+        guard .degrees(0) ... .degrees(180) ~= angle else { return }
         let servoTurn = round(angle.degrees / 180 * 255)
         sendCommand(id: 10, payload: [1, UInt8(servoTurn)])
     }
     
     public func turnWheel(_ direction: HorizontalDirection, by angle: Angle) {
-        guard angle ~= .degrees(0) ... .degrees(90) else { return }
+        guard .degrees(0) ... .degrees(90) ~= angle else { return }
         turnWheel(by: direction == .right ? angle : .degrees(180) - angle)
     }
     
